@@ -31,6 +31,9 @@ puts max_2_sum([22]) == 22
 puts max_2_sum([11,22,2]) ==33
 
 def sum_to_n?(array,n)
+	if array.length == 0 and n==0
+		return true
+	end
 	x=0
 	y=array.length-1
   while x < y do
