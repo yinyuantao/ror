@@ -1,0 +1,35 @@
+def hello(name)
+	return "Hello, #{name}"
+end
+
+puts hello("david")
+
+def starts_with_consonant?(s)
+		if s.length ==0
+			return false
+		end
+    first_letter = s[0, 1].upcase
+    noconsonants = ["A", "E", "I", "O", "U"]
+    noconsonants.each do |x|
+        if x == first_letter
+            return false
+        end
+    end
+    return true
+end
+
+puts starts_with_consonant?('#123')
+puts starts_with_consonant?('bsian')
+
+    
+def binary_multiple_of_4?(s)
+  if(s =~ /^[01]*1[01]*00$/)
+		return true
+	else
+		return false
+	end
+end
+
+p binary_multiple_of_4? "1100"
+p binary_multiple_of_4? "HW1000"
+p binary_multiple_of_4? ("0b100")
